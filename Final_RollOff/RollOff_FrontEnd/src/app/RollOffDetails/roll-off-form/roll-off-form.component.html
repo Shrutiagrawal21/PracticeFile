@@ -1,0 +1,79 @@
+<app-nav2> </app-nav2>
+
+<div class="page-header">
+    <div class="container">
+        <h1>Employee Details</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="container-tab ">
+        <div class="row-base">
+            <div class="col">
+             <tr>
+                <td class="sp">Globle Group ID</td>
+                <td>{{employee.globalGroupId}}</td>
+                <td class="sp">Employee No</td>
+                <td>{{employee.employeeNo}}</td>
+            </tr>
+
+                <tr>
+                    <td class="sp">Name </td>
+                    <td>{{employee.name}}</td>
+                    <td class="sp">Glocal Grade </td>
+                    <td>{{employee.localGrade}}</td>
+                </tr>
+
+
+                <tr>
+                    <td class="sp">Main Client </td>
+                    <td>{{employee.mainClient}}</td>
+                    <td class="sp">Email</td>
+                    <td>{{employee.email}}</td>
+                </tr>
+
+
+                <tr>
+                    <td class="sp">Joining Date</td>
+                    <td>{{employee.joiningDate | date:'longDate'}}</td>
+                    <td class="sp">Project Code</td>
+                    <td>{{employee.projectCode}}</td>
+                </tr>
+
+
+                <tr>
+                    <td class="sp">Project Name </td>
+                    <td>{{employee.projectName}}</td>
+                    <td class="sp">Project Start Date</td>
+                    <td>{{employee.projectStartDate | date:'longDate'}}</td>
+                </tr>
+                <tr>
+                    <td class="sp">Project End Date</td>
+                    <td>{{employee.projectEndDate | date:'longDate'}}</td>
+                    <td class="sp">
+                        People Manager
+                    </td>
+                    <td>{{employee.peopleManager}}</td>
+                </tr>
+                <tr>
+                    <td class="sp">Practice </td>
+                    <td>{{employee.practice}}</td>
+                    <td class="sp">PSP Name </td>
+                    <td>{{employee.pspName}}</td>
+                </tr>
+                <tr>
+                    <td class="sp">New Global Practice </td>
+                    <td>{{employee.newGlobalPractice}}</td>
+                    <td class="sp">Office City</td>
+                    <td>{{employee.officeCity}}</td>
+                </tr>
+                <tr>
+                    <td class="sp">Country </td>
+                    <td>{{employee.country}}</td>
+                </tr>
+            </div>
+        </div>
+        <div class="row bot-row">
+            <div class="col-xs-12 row end-xs"> 
+                <a routerLink="/form" color="accent" mat-raised-button>Roll Off</a> </div>
+        </div>
+    </div>

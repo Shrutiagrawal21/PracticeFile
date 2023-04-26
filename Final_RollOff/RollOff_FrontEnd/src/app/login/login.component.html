@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+<div class="outer">
+  <div class="container">
+    <div class="row">
+      <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+        <div class="panel-heading">
+          <h3 calss="pt-3 font-weight-bold">Login</h3>
+        </div>
+        
+        <div class="panel-body p-3">
+
+          <!--(ngSubmit)="onLogin()-->
+          <form [formGroup]="loginForm"  >
+            <div class="form-group pt-3">
+              <div class="input-field">
+                <span class="fa fa-user p-2"></span>
+                <input formControlName="userName"  name="userName" class="form-control" type="text" placeholder="username" >
+              
+              </div>
+              <div class="form-text text-danger" *ngIf="userName.errors?.['required'] && (userName.dirty || userName.touched)">
+                *Username is Required 
+               </div>
+            </div>
+           
+            
+
+            <div class="form-group pt-3">
+              <div class="input-field">
+                <span class="fa fa-lock p-2"></span>
+                <input formControlName="password"  name="password" class="form-control" [type]="type" placeholder="password" class="pass">
+                
+                <span (click)="hideShowPass()" class="fa {{eyeIcon}} p-2"></span>
+              </div>
+              <div class="form-text text-danger" *ngIf="password.errors?.['required'] && (password.dirty || password.touched)">
+                *Password is Required 
+               </div>  
+               <div class="form-text text-danger"
+                *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] && (password.dirty || password.touched)">
+                 Password should be at least 6 and max 15 characters long.
+                </div>
+            </div>
+
+
+            <div class="form-group pt-3">
+              <div class="input-field">
+                <span class="fa fa-user p-2"></span>
+                <select class="form-control form-select" formControlName="role"  type="text" placeholder="Role" >
+                <!-- <select class="form-control form-select" name="resigned" aria-label=".form-select-lg example" formControlName="Role"> -->
+                  <option selected>--Select--</option>
+                  <option value="PSP Team">PSP Team</option>
+                  <option value="Account Team">Account Team</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-inline fr mt-4">
+              <a id="forget" class="font-weight-bold">Forget Password</a>
+            </div>
+            <button  (click)="onLogin()" type="submit" class="btn btn-primary btn-block mt-4 w-100" routerLink="roll-off-details">Login</button>
+            <div class="text-center pt-4 text-muted" >Don't have account?  <a class="link" routerLink="/sign-up">Sign Up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<form class="app" [formGroup]=" loginform" (ngSubmit)="loginSubmited()">
+  <div class="row g 0">
+      <div class="col text-center p-2 mb-3 bg-light">
+          <span class="fs-3"><h1>Login</h1></span>
+      </div>
+  </div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Username</label>
+  <input type="UserName" formControlName="UserName"  name="UserName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username"> 
+  <div class="form-text text-danger" *ngIf="UserName.errors?.['required'] && (UserName.dirty || UserName.touched)">
+     UserName is Required 
+    </div>  
+</div>
+<div class="form-group">
+  <label for="exampleInputPassword1">Password</label>
+  <input type="password" formControlName="Password"  name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.dirty || Password.touched)">
+    Password is Required 
+   </div>  
+   <div class="form-text text-danger"
+    *ngIf="Password.errors?.['minlength'] || Password.errors?.['maxlength'] && (Password.dirty || Password.touched)">
+     Password should be at least 6 and max 15 characters long.
+    </div>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+-->

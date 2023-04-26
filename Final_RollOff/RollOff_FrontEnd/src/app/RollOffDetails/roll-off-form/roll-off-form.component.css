@@ -1,0 +1,22 @@
+.top-row{
+    padding: 1em0;
+}
+
+.bot-row{
+    padding: 1em 30em;
+}
+.row-ase{
+    margin-left: 15 em;
+    line-height: 3em;
+}
+.container-tab{
+
+    padding: 2em 0;
+    border-style: solid;
+    border-color:rgb(21,21,19);
+}
+
+.sp{
+    font-weight: bold;
+    padding-left: 3em;
+}

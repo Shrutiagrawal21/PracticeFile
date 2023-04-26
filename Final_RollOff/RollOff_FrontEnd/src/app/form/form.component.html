@@ -1,0 +1,151 @@
+<app-nav2></app-nav2>
+<form [formGroup]="addEmp" >
+    <br>
+    <h4 class="text-center">Roll Off Request and Feedback</h4>
+    <div class="container p-2 center">
+        
+        <!--Section first-->
+    <div class="row">
+      <div class="container col">
+        <label><b>Name</b></label> 
+        <input type="text" class="form-control"  name="name" formControlName="name">
+      </div>
+      <div class="container col">
+        <label><b>Practice</b></label> 
+        <input type="text" class="form-control"  name="practice" formControlName="practice">
+      </div>
+      <div class="container col">
+        <label><b>Performance Issue</b></label>
+        <select class="form-control form-select" name="perform" aria-label=".form-select-lg example" formControlName="performanceIssue">
+            <option selected>--Select--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+      </div>
+     <div class="container col">
+        <label><b>Technical Skills</b></label>
+        <input type="text" class="form-control"  name="techskills" formControlName="technicalSkill">
+      </div>
+    </div>
+   <br>
+    <!-- Section 2-->
+    <div class="row">
+        <div class="container col">
+          <label><b>Local Grade</b></label> 
+          <input type="text" class="form-control" name="grade" placeholder="" formControlName="localGrade">
+        </div>
+        <div class="container col">
+          <label><b>Roll-Off End Date</b></label> 
+        <input type="text" class="form-control" name="endDate" type="date" placeholder="" formControlName="rollOffEndDate">
+        </div>
+        <div class="container col">
+            <label><b>Resigned</b></label>
+            <select class="form-control form-select" name="resigned" aria-label=".form-select-lg example" formControlName="resigned">
+                <option selected>--Select--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+        </div>
+       <div class="container col">
+          <label><b>Communication</b></label>
+          <input type="text" class="form-control" name="comm" placeholder="" formControlName="communication">
+        </div>
+      </div>
+      <br>
+       <!--Section 3-->
+    <div class="row">
+        <div class="container col">
+          <label><b>Primary Skills</b></label> 
+          <input type="text" class="form-control" name="skills" placeholder="" formControlName="primarySkill">
+        </div>
+        <div class="container col">
+            <label><b>Reasons for Roll-Off</b></label>
+            <select class="form-control form-select" name="reasons" aria-label=".form-select-lg example" formControlName="reasonForRollOff">
+                <option selected>--Select--</option>
+                <option value="Project Closure">Project Closure</option>
+                <option value="Maternity Leave">Maternity Leave</option>
+                <option value="Resigned">Resigned</option>
+                <option value="Performance Issue">Performance Issue</option>
+                <option value="HR Case">HR Case</option>
+                <option value="People Skill">People Skill</option>
+                <option value="Automation">Automation</option>
+                <option value="Quality">Quality</option>
+                <option value="New Delivery Model">New Delivery Model</option>       
+                <option value="Labour(Work Force Productivity)">Labour(Work Force Productivity)</option>
+                <option value="Client Budget Issues">Client Budget Issues</option>                             
+              </select>
+        </div>
+        <div class="container col">
+          <label><b>Under Prohibition</b></label>
+          <select class="form-control form-select" name="prohib" aria-label=".form-select-lg example" formControlName="underProbation">
+            <option selected>--Select--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="container col">
+          <label><b>Role Competencies</b></label>
+          <input type="text" class="form-control" name="role" placeholder="" formControlName="roleCompetencies">
+        </div>
+      </div>
+      <br>
+      <!--Section 4-->
+      <div class="row">
+        <div class="container col">
+          <label><b>Project Code</b></label> 
+          <input type="text" class="form-control" name="pcode" type="number" placeholder="" formControlName="projectCode">
+        </div>
+        <div class="container col">
+          <label><b>Other Reasons</b></label> 
+          <input type="text" class="form-control" name="oreason" placeholder="" formControlName="otherReasons">
+        </div>
+        <div class="container col">
+          <label><b>Long Leave</b></label>
+          <select class="form-control form-select" name="leave" aria-label=".form-select-lg example" formControlName="longLeave">
+            <option selected>--Select--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="container col">
+          <label><b>Remarks</b></label>
+          <input type="text" class="form-control" name="remark" placeholder="" formControlName="remarks">
+        </div>
+      </div>
+      <br>
+      <!--Section 5-->
+      <div class="row">
+        <div class="container col">
+          <label><b>Project Name</b></label> 
+          <input type="text" class="form-control" name="pname" placeholder="" formControlName="projectName">
+        </div>
+        <div class="container col">
+          <label><b>Is backfilled</b></label> 
+          <select class="form-control form-select" name="backfilled" aria-label=".form-select-lg example" formControlName="thisReleaseNeedsBackfillIsBackfilled">
+            <option selected>--Select--</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="container col">
+          <label><b>Leave Type</b></label>
+          <select class="form-control form-select" name="ltype" aria-label=".form-select-lg example" formControlName="leaveType">
+            <option selected>--Select--</option>
+            <option value="yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+       <div class="container col">
+          <label><b>Relevant Experience in Years</b></label>
+          <input type="text" class="form-control" name="years" tyep="number" placeholder="" formControlName="relevantExperienceYears">
+        </div>
+      
+    </div>
+  
+    <br>
+    <div class="text-center">
+        <button (click)="SaveData()" type="button" class="btn btn-success" name="Submit">Submit</button>
+    </div>
+</div>
+
+  </form>
